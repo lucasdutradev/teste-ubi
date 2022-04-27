@@ -1,3 +1,4 @@
+import ButtonDefault from "../../components/buttonDefault";
 import Header from "../../components/header";
 import { CardContainer } from "./styled";
 
@@ -17,7 +18,7 @@ const CardPage = () => {
           </p>
         </div>
         <div className="boxButtons">
-          <button>ADD Favor</button>
+          <ButtonDefault>ADD Favor</ButtonDefault>
         </div>
       </CardContainer>
     </>

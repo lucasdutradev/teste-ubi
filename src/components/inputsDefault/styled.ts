@@ -25,7 +25,6 @@ export const InputContain = styled.div`
   button {
     width: 30%;
     height: 30px;
-    border: none;
     border-radius: 5px;
     background-color: var(--gold-50);
     color: var(--black-default);

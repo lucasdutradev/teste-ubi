@@ -22,6 +22,10 @@ const GlobalStyle = createGlobalStyle`
         height: 100vh;
     }
 
+    button{
+        cursor: pointer;
+    }
+
     
 `;
 
