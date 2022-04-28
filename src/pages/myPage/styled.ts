@@ -7,10 +7,6 @@ export const ContainDrinks = styled.section`
   justify-content: center;
   flex-direction: column;
 
-  h1 {
-    margin: 50px 0;
-  }
-
   .containDrinks {
     max-width: 1200px;
     display: flex;
@@ -18,5 +14,14 @@ export const ContainDrinks = styled.section`
     align-items: center;
     justify-content: center;
     gap: 70px;
+  }
+
+  .containTitle {
+    width: 100%;
+    max-width: 1000px;
+    margin: 50px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 `;

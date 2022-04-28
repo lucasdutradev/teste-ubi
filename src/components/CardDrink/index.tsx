@@ -1,12 +1,15 @@
 import { CardContain } from "./styled";
 import { GrAddCircle } from "react-icons/gr";
+import { PropsItens } from "../../interfaces";
 
-const CardDrink = () => {
+const CardDrink = ({ idDrink, name, image, instruction }: PropsItens) => {
   return (
     <CardContain>
-      <h1>Img</h1>
+      <div className="imageContain">
+        <img src={image} alt={name} />
+      </div>
       <div className="textContain">
-        <h2>Name of drink.</h2>
+        <h2>{name}</h2>
         <GrAddCircle />
       </div>
     </CardContain>

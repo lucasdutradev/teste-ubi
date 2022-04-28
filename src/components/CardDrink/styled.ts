@@ -9,12 +9,20 @@ export const CardContain = styled.div`
   justify-content: center;
   border-radius: 10px;
 
-  h1 {
+  .imageContain {
     width: 40%;
     border-radius: 10px 0 50px 10px;
     height: 100%;
     background-color: gray;
     transition: 0.3s;
+    cursor: pointer;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      border-radius: 10px 0 50px 10px;
+    }
   }
 
   .textContain {
@@ -41,7 +49,7 @@ export const CardContain = styled.div`
     width: 40%;
   }
 
-  :hover > h1 {
+  :hover > .imageContain {
     border-radius: 10px;
     width: 60%;
   }

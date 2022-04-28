@@ -25,6 +25,8 @@ export const MainContain = styled.main`
 `;
 
 export const SectionContain = styled.section`
+  width: 100%;
+  max-width: 1030px;
   margin-top: 50px;
   display: flex;
   flex-direction: column;
@@ -49,4 +51,5 @@ export const SectionContainItens = styled.section`
   align-items: center;
   justify-content: center;
   gap: 20px;
+  margin-bottom: 50px;
 `;
