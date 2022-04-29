@@ -2,11 +2,13 @@ import { useContext, useState } from "react";
 import ButtonDefault from "../../components/buttonDefault";
 import Header from "../../components/header";
 import { DrinkTypeData } from "../../interfaces";
+import { AddFavorDrinkContext } from "../../Provider/addFavoritDrink/addFavoritDrink";
 import { SearchDrinkContext } from "../../Provider/searchDrink/search";
 import { CardContainer } from "./styled";
 
 const CardPage = () => {
   const { drinkInfo } = useContext(SearchDrinkContext) as DrinkTypeData;
+  const { handleAddLocale } = useContext(AddFavorDrinkContext);
 
   const [ingredient, setIngredient] = useState(
     Object.entries(drinkInfo)
@@ -37,7 +39,9 @@ const CardPage = () => {
           </div>
         </div>
         <div className="boxButtons">
-          <ButtonDefault>ADD Favor</ButtonDefault>
+          <ButtonDefault onClick={() => handleAddLocale(drinkInfo)}>
+            ADD Favor
+          </ButtonDefault>
         </div>
       </CardContainer>
     </>

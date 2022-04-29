@@ -40,7 +40,7 @@ const HomePage = () => {
         </ContainFilter>
 
         <SectionContainItens>
-          {drink !== null ? (
+          {drink[0] !== undefined ? (
             drink.map((obj: any, index) => (
               <CardDrink
                 key={index}
