@@ -13,4 +13,5 @@ export interface PropsStateFavor {
   myDrinks: Array<{}>;
   setMyDrinks: React.Dispatch<React.SetStateAction<Array<{}>>>;
   handleAddLocale: (item: any) => void;
+  handleRemoveLocale: (id: string) => void;
 }

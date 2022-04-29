@@ -28,4 +28,5 @@ export const DEFAULT_VALUE_FAVOR = {
   myDrinks: [],
   setMyDrinks: () => {},
   handleAddLocale: () => {},
+  handleRemoveLocale: () => {},
 };

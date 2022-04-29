@@ -16,6 +16,10 @@ export const AddFavorDrinkProvider = ({ children }: PropChild) => {
     }
   };
 
+  const handleRemoveLocale = (id: any) => {
+    setMyDrinks(myDrinks.filter((drink: any) => drink.idDrink !== id));
+  };
+
   useEffect(() => {
     localStorage.setItem("@UserDrink", JSON.stringify(myDrinks));
   }, [myDrinks]);
@@ -25,6 +29,7 @@ export const AddFavorDrinkProvider = ({ children }: PropChild) => {
         myDrinks,
         setMyDrinks,
         handleAddLocale,
+        handleRemoveLocale,
       }}
     >
       {children}
