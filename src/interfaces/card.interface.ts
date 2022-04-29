@@ -1,4 +1,6 @@
-export interface PropsItens {
+export interface PropsItens
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  item: {};
   idDrink: string;
   name: string;
   image: string;

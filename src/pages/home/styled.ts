@@ -24,6 +24,32 @@ export const MainContain = styled.main`
   }
 `;
 
+export const ContainFilter = styled.section`
+  margin: 15px 0;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+`;
+export const ContainFilterAlfa = styled.section`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+
+  button {
+    border: none;
+    background-color: transparent;
+    font-size: 19px;
+    color: var(--gold-50);
+    font-weight: bold;
+  }
+
+  span {
+    color: #ccc;
+  }
+`;
+
 export const SectionContain = styled.section`
   width: 100%;
   max-width: 1030px;

@@ -1,9 +1,12 @@
 import { useContext, useState } from "react";
-import CardDrink from "../../components/CardDrink";
+import CardDrink from "../../components/cardDrink";
 import Header from "../../components/header";
 import InputDefault from "../../components/inputsDefault";
+import { alfabetic } from "../../config/alfabetic";
 import { SearchDrinkContext } from "../../Provider/searchDrink/search";
 import {
+  ContainFilter,
+  ContainFilterAlfa,
   MainContain,
   SectionContain,
   SectionContainItens,
@@ -11,7 +14,7 @@ import {
 } from "./styled";
 
 const HomePage = () => {
-  const { drink } = useContext(SearchDrinkContext);
+  const { drink, handleSearchByLetter } = useContext(SearchDrinkContext);
   const [nameDrink, setNameDrink] = useState("");
   return (
     <>
@@ -25,11 +28,23 @@ const HomePage = () => {
           <hr />
           <h2>Drinks researched</h2>
         </TextContain>
+        <ContainFilter>
+          {alfabetic.map((letter, index) => (
+            <ContainFilterAlfa key={index}>
+              <button onClick={() => handleSearchByLetter(letter)}>
+                {letter}
+              </button>
+              <span>/</span>
+            </ContainFilterAlfa>
+          ))}
+        </ContainFilter>
+
         <SectionContainItens>
           {drink !== null ? (
             drink.map((obj: any, index) => (
               <CardDrink
                 key={index}
+                item={obj}
                 idDrink={obj.idDrink}
                 name={obj.strDrink}
                 image={obj.strDrinkThumb}

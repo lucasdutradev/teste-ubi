@@ -6,9 +6,9 @@ import NotFoundPage from "../pages/NotFoundPage";
 
 const RoutesDefault = () => (
   <Switch>
-    <Route path="/" component={HomePage} exact />
-    <Route path="/cardPage" component={CardPage} />
-    <Route path="/myPage" component={MyPage} />
+    <Route exact path="/cardPage" component={CardPage} />
+    <Route exact path="/myPage" component={MyPage} />
+    <Route exact path="/" component={HomePage} />
     <Route path="*" component={NotFoundPage} />
   </Switch>
 );

@@ -7,7 +7,8 @@ const GlobalStyle = createGlobalStyle`
         --white-honey: #EAF2E3;
         --white-default: #fff;
         --black-default: #000;
-        --gray-50: #cfcfcf
+        --gray-50: #cfcfcf;
+        --red-50: #ff9673;
     }
     
     *{

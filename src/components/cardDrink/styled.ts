@@ -22,6 +22,7 @@ export const CardContain = styled.div`
       width: 100%;
       height: 100%;
       border-radius: 10px 0 50px 10px;
+      transition: 0.3s;
     }
   }
 
@@ -50,7 +51,10 @@ export const CardContain = styled.div`
   }
 
   :hover > .imageContain {
-    border-radius: 10px;
     width: 60%;
+  }
+
+  :hover > .imageContain img {
+    border-radius: 10px;
   }
 `;
