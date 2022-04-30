@@ -23,8 +23,30 @@ export const MainContain = styled.main`
     font-weight: normal;
   }
 
+  span {
+    margin-top: 15px;
+    color: var(--white-default);
+  }
+
   .containFilter {
+    margin-top: 15px;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    button {
+      cursor: pointer;
+      border: none;
+      background-color: var(--gold-50);
+      border-radius: 5px;
+      padding: 5px;
+      transition: 0.3s;
+    }
+    button:hover {
+      background-color: var(--white-default);
+      color: var(--gold-50);
+    }
   }
 `;
 

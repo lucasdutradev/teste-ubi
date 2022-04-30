@@ -7,6 +7,7 @@ export const InputContain = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 1px solid transparent;
 
   :focus-within {
     border: 1px solid var(--gold-50);

@@ -1,4 +1,5 @@
 import { useContext, useState } from "react";
+import ButtonDefault from "../../components/buttonDefault";
 import CardDrink from "../../components/cardDrink";
 import Header from "../../components/header";
 import InputDefault from "../../components/inputsDefault";
@@ -24,9 +25,10 @@ const HomePage = () => {
       <MainContain>
         <h2>Your garden with a good alcohol content.</h2>
         <InputDefault setNameDrink={setNameDrink} nameDrink={nameDrink} />
+        <span>Or search by category</span>
         <div className="containFilter">
           <button onClick={() => handleSearchCategory("Ordinary_Drink")}>
-            Ordinary_Drink
+            Ordinary Drink
           </button>
           <button onClick={() => handleSearchCategory("Cocktail")}>
             Cocktail

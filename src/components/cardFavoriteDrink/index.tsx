@@ -6,19 +6,19 @@ import { useContext } from "react";
 import { SearchDrinkContext } from "../../provider/searchDrink/search";
 import { AddFavorDrinkContext } from "../../provider/addFavoriteDrink/addFavoriteDrink";
 
-const CardFavoriteDrink = ({ item, idDrink, name, image }: PropsItens) => {
-  const { setDrinkInfo } = useContext(SearchDrinkContext);
+const CardFavoriteDrink = ({ idDrink, name, image }: PropsItens) => {
+  const { handleSearchById } = useContext(SearchDrinkContext);
   const { handleRemoveLocale } = useContext(AddFavorDrinkContext);
   const history = useHistory();
 
-  const handleSubmit = (obj: any) => {
-    setDrinkInfo(obj);
+  const handleSubmit = (id: string) => {
+    handleSearchById(id);
     return history.push("/cardPage");
   };
 
   return (
     <CardContain>
-      <div onClick={() => handleSubmit(item)} className="imageContain">
+      <div onClick={() => handleSubmit(idDrink)} className="imageContain">
         <img src={image} alt={name} />
       </div>
       <div className="textContain">
