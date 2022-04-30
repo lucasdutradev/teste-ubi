@@ -9,6 +9,26 @@ export const SearchDrinkProvider = ({ children }: PropChild) => {
   const [drink, setDrink] = useState<Array<{}>>([]);
   const [drinkInfo, setDrinkInfo] = useState(DEFAULT_VALUE.drinkInfo);
 
+  const handleSearchById = (id: string) => {
+    axios
+      .get(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`)
+      .then((resp) => {
+        // removendo informacoes "null" da API
+        const drinksArray = resp.data.drinks.map((elementDrink: any) => {
+          return {
+            ...Object.keys(elementDrink).reduce((acc: any, key) => {
+              if (elementDrink[key] !== null) {
+                acc = { ...acc, [key]: elementDrink[key] };
+              }
+              return acc;
+            }, {}),
+          };
+        });
+        setDrinkInfo(drinksArray[0]);
+      })
+      .catch((_) => setDrinkInfo(DEFAULT_VALUE.drinkInfo));
+  };
+
   const handleSearch = (drinkName = "margarita") => {
     axios
       .get(
@@ -27,6 +47,17 @@ export const SearchDrinkProvider = ({ children }: PropChild) => {
           };
         });
         setDrink(drinksArray);
+      })
+      .catch((_) => setDrink([]));
+  };
+
+  const handleSearchCategory = (categoryName: string) => {
+    axios
+      .get(
+        `https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=${categoryName}`
+      )
+      .then((resp) => {
+        setDrink(resp.data.drinks);
       })
       .catch((_) => setDrink([]));
   };
@@ -66,6 +97,8 @@ export const SearchDrinkProvider = ({ children }: PropChild) => {
         drinkInfo,
         setDrinkInfo,
         handleSearchByLetter,
+        handleSearchCategory,
+        handleSearchById,
       }}
     >
       {children}

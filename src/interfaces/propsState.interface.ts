@@ -7,6 +7,8 @@ export interface PropsState {
   setDrinkInfo: (obj: DrinkType) => void;
   handleSearch: (str: string) => void;
   handleSearchByLetter: (str: string) => void;
+  handleSearchCategory: (str: string) => void;
+  handleSearchById: (str: string) => void;
 }
 
 export interface PropsStateFavor {

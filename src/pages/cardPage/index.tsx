@@ -38,7 +38,7 @@ const CardPage = () => {
         </div>
         <div className="boxButtons">
           <ButtonDefault onClick={() => handleAddLocale(drinkInfo)}>
-            Favorite
+            Add favorites
           </ButtonDefault>
         </div>
       </CardContainer>

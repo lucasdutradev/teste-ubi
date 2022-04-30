@@ -22,6 +22,10 @@ export const MainContain = styled.main`
     margin-bottom: 20px;
     font-weight: normal;
   }
+
+  .containFilter {
+    display: flex;
+  }
 `;
 
 export const ContainFilter = styled.section`
@@ -31,6 +35,7 @@ export const ContainFilter = styled.section`
   align-items: center;
   justify-content: center;
 `;
+
 export const ContainFilterAlfa = styled.section`
   display: flex;
   align-items: center;

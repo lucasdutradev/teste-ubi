@@ -13,6 +13,8 @@ export const DEFAULT_VALUE = {
   setDrinkInfo: () => {},
   handleSearch: () => {},
   handleSearchByLetter: () => {},
+  handleSearchCategory: () => {},
+  handleSearchById: () => {},
 };
 
 export const DEFAULT_VALUE_FAVOR = {

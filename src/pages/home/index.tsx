@@ -14,7 +14,8 @@ import {
 } from "./styled";
 
 const HomePage = () => {
-  const { drink, handleSearchByLetter } = useContext(SearchDrinkContext);
+  const { drink, handleSearchByLetter, handleSearchCategory } =
+    useContext(SearchDrinkContext);
   const [nameDrink, setNameDrink] = useState("");
 
   return (
@@ -23,6 +24,14 @@ const HomePage = () => {
       <MainContain>
         <h2>Your garden with a good alcohol content.</h2>
         <InputDefault setNameDrink={setNameDrink} nameDrink={nameDrink} />
+        <div className="containFilter">
+          <button onClick={() => handleSearchCategory("Ordinary_Drink")}>
+            Ordinary_Drink
+          </button>
+          <button onClick={() => handleSearchCategory("Cocktail")}>
+            Cocktail
+          </button>
+        </div>
       </MainContain>
       <SectionContain>
         <TextContain>

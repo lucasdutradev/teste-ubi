@@ -10,7 +10,6 @@ export const AddFavorDrinkProvider = ({ children }: PropChild) => {
   const [myDrinks, setMyDrinks] = useState<Array<{}>>(
     JSON.parse(localStorage.getItem("@UserDrink") || "[]")
   );
-  console.log(myDrinks);
 
   const handleAddLocale = (item: any) => {
     const isIncluded = myDrinks.find(
