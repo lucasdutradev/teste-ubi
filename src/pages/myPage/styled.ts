@@ -21,7 +21,16 @@ export const ContainDrinks = styled.section`
     max-width: 1000px;
     margin: 50px 0;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    gap: 15px;
+  }
+
+  @media screen and (min-width: 769px) {
+    .containTitle {
+      width: 90%;
+      flex-direction: row;
+    }
   }
 `;
