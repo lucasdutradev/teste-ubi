@@ -10,13 +10,6 @@ const GlobalStyle = createGlobalStyle`
         --gray-50: #cfcfcf;
         --red-50: #ff9673;
     }
-    
-    *{
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-        font-family: 'Poppins', sans-serif;
-    }
 
     #root{
         display: flex;
@@ -25,8 +18,19 @@ const GlobalStyle = createGlobalStyle`
         justify-content: flex-start;
     }
     
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+    
     button{
         cursor: pointer;
+    }
+
+    a{
+        text-decoration: none;
     }
 
     

@@ -1,18 +1,20 @@
 import { HeaderContainer } from "./styled";
 import { FaRegUser } from "react-icons/fa";
-import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 const Header = () => {
   const history = useHistory();
-  const handleSubmit = () => {
-    return history.push("/myPage");
-  };
+
+  const handleClick = () => history.push("/myPage");
+
   return (
     <HeaderContainer>
       <div className="container">
-        <h1>Beer Garden</h1>
+        <Link to="/">
+          <h1>Beer Garden</h1>
+        </Link>
         <div className="user-click">
-          <FaRegUser onClick={handleSubmit} />
+          <FaRegUser onClick={handleClick} />
         </div>
       </div>
     </HeaderContainer>

@@ -1,22 +1,20 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import ButtonDefault from "../../components/buttonDefault";
 import Header from "../../components/header";
 import { DrinkTypeData } from "../../interfaces";
-import { AddFavorDrinkContext } from "../../Provider/addFavoritDrink/addFavoritDrink";
-import { SearchDrinkContext } from "../../Provider/searchDrink/search";
+import { AddFavorDrinkContext } from "../../provider/addFavoriteDrink/addFavoriteDrink";
+import { SearchDrinkContext } from "../../provider/searchDrink/search";
 import { CardContainer } from "./styled";
 
 const CardPage = () => {
   const { drinkInfo } = useContext(SearchDrinkContext) as DrinkTypeData;
   const { handleAddLocale } = useContext(AddFavorDrinkContext);
 
-  const [ingredient, setIngredient] = useState(
-    Object.entries(drinkInfo)
-      .filter((arr) => {
-        return arr[0].includes("strIngredient");
-      })
-      .map((elemn) => elemn[1])
-  );
+  const ingredient = Object.entries(drinkInfo)
+    .filter((arr) => {
+      return arr[0].includes("strIngredient");
+    })
+    .map((elemn) => elemn[1]);
 
   return (
     <>
@@ -40,7 +38,7 @@ const CardPage = () => {
         </div>
         <div className="boxButtons">
           <ButtonDefault onClick={() => handleAddLocale(drinkInfo)}>
-            ADD Favor
+            Favorite
           </ButtonDefault>
         </div>
       </CardContainer>

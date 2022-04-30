@@ -1,10 +1,7 @@
+import { PropChild } from "../../interfaces";
 import { Button } from "./styled";
 
-interface PropsButton extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  children: JSX.Element | string;
-}
-
-const ButtonDefault = ({ children, ...rest }: PropsButton) => {
+const ButtonDefault = ({ children, ...rest }: PropChild) => {
   return <Button {...rest}>{children}</Button>;
 };
 

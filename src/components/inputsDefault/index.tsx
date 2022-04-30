@@ -1,12 +1,8 @@
 import { useContext } from "react";
-import { SearchDrinkContext } from "../../Provider/searchDrink/search";
+import { PropsNameDrink } from "../../interfaces";
+import { SearchDrinkContext } from "../../provider/searchDrink/search";
 import ButtonDefault from "../buttonDefault";
 import { InputContain } from "./styled";
-
-interface PropsNameDrink {
-  nameDrink: string;
-  setNameDrink: (str: string) => void;
-}
 
 const InputDefault = ({ nameDrink, setNameDrink }: PropsNameDrink) => {
   const { handleSearch } = useContext(SearchDrinkContext);

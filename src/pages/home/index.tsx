@@ -3,7 +3,7 @@ import CardDrink from "../../components/cardDrink";
 import Header from "../../components/header";
 import InputDefault from "../../components/inputsDefault";
 import { alfabetic } from "../../config/alfabetic";
-import { SearchDrinkContext } from "../../Provider/searchDrink/search";
+import { SearchDrinkContext } from "../../provider/searchDrink/search";
 import {
   ContainFilter,
   ContainFilterAlfa,
@@ -16,6 +16,7 @@ import {
 const HomePage = () => {
   const { drink, handleSearchByLetter } = useContext(SearchDrinkContext);
   const [nameDrink, setNameDrink] = useState("");
+
   return (
     <>
       <Header />

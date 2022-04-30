@@ -15,3 +15,8 @@ export interface PropsStateFavor {
   handleAddLocale: (item: any) => void;
   handleRemoveLocale: (id: string) => void;
 }
+
+export interface PropsNameDrink {
+  nameDrink: string;
+  setNameDrink: (str: string) => void;
+}

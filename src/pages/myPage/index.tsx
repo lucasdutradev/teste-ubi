@@ -3,16 +3,15 @@ import { useHistory } from "react-router-dom";
 import ButtonDefault from "../../components/buttonDefault";
 import CardFavoriteDrink from "../../components/cardFavoriteDrink";
 import Header from "../../components/header";
-import { AddFavorDrinkContext } from "../../Provider/addFavoritDrink/addFavoritDrink";
+import { AddFavorDrinkContext } from "../../provider/addFavoriteDrink/addFavoriteDrink";
 import { ContainDrinks } from "./styled";
 
 const MyPage = () => {
   const { myDrinks } = useContext(AddFavorDrinkContext);
-  console.log(myDrinks[0]);
   const history = useHistory();
-  const handleSubmit = () => {
-    return history.push("/");
-  };
+
+  const handleSubmit = () => history.push("/");
+
   return (
     <>
       <Header />
@@ -38,7 +37,7 @@ const MyPage = () => {
               />
             ))
           ) : (
-            <h1>nothing added yet...</h1>
+            <h1>Nothing added yet...</h1>
           )}
         </div>
       </ContainDrinks>

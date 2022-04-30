@@ -52,9 +52,11 @@ export const SearchDrinkProvider = ({ children }: PropChild) => {
       })
       .catch((_) => setDrink([]));
   };
+
   useEffect(() => {
     handleSearch();
   }, []);
+
   return (
     <SearchDrinkContext.Provider
       value={{

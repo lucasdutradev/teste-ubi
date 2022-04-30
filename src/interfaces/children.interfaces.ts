@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 
-export interface PropChild {
+export interface PropChild
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
 }
