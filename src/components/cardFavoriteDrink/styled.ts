@@ -38,6 +38,10 @@ export const CardContain = styled.div`
 
     h2 {
       font-size: 13px;
+      max-width: 12ch;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
 
     svg {
